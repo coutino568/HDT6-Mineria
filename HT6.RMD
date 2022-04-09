@@ -43,3 +43,10 @@ Modelo_Medias
 Modelo_Caras <- glm(Caras~., data = train[,c(1:7,13)],family = binomial(),maxit = 100)
 Modelo_Caras
 ```
+
+#Multicolinealidad
+```{r}
+CMatriz <- C(Datos)
+corrplot(CMatriz, method = '')
+C(Datos)
+```
